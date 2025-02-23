@@ -20,18 +20,15 @@ body, html {
 }
 
 main {
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
     width: 100vw;
 }
 
 section#login{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     overflow: hidden;
-
     background-color: white;
     width: 250px;
     height: 500px;
@@ -51,7 +48,8 @@ section#login{
 }
 
 #formulario{
-    display: block;
+    display: flex;
+    flex-flow: column nowrap;
     padding: 10px;
 }
 
@@ -67,12 +65,14 @@ section#login{
 
 form > .campo{
     background-color: #5f2c82;
-    display: block;
+    
     border: 2px solid #5f2c82;
     width: 100%;
     height: 40px;
     border-radius: 8px;
     margin: 5px 0px;
+
+    display: flex;
 }
 
 .campo > label {
@@ -89,13 +89,13 @@ form > .campo{
 .campo > input{
     background-color: #94cfcd;
     font-size: 1em;
-    width: calc(100% - 45px);
     height: 100%;
     border: 0px;
     border-radius: 8px;
     padding: 4px;
     outline: none;
-    transform: translateY(-8px);
+
+    flex: auto;
 }
 
 .campo > input:focus-within{
